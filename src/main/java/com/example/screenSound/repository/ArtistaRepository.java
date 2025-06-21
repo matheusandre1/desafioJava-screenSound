@@ -12,6 +12,5 @@ public interface ArtistaRepository extends JpaRepository<Artista, Long>
 {
     Optional<Artista> findByNomeContainingIgnoreCase(String nome);
 
-    @Query("Select m From Artista a JOIN a.musicas m WHERE a.nome ILIKE %:nome%")
-    List<Musica> buscaMusicasPorArtista(String nome);
+
 }

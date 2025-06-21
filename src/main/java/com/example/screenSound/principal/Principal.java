@@ -112,7 +112,14 @@ public class Principal {
         artistas.forEach(System.out::println);
     }
 
-    private void buscarMusicaPorArtista() {
+    private void buscarMusicaPorArtista()
+    {
+        System.out.println("Busca Música por Artista: ");
+        var nome = scanner.nextLine();
+
+        List<Musica> musicas = _artistaRepository.buscaMusicasPorArtista(nome);
+
+        musicas.forEach(System.out::println);
     }
 
 }
